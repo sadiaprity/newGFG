@@ -1,0 +1,130 @@
+﻿/* Ensure html and body cover the full viewport height */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/* Apply the background image and ensure it covers the full viewport */
+body {
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    overflow: hidden; /* Optional: Prevents scrolling */
+}
+
+/* Form container styling (shared by both login and register forms) */
+.form-container {
+    background: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+    border-radius: 12px;
+    padding: 30px;
+    width: 350px;
+    text-align: center;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+    animation: fadeIn 0.6s ease-in-out, popOut 0.6s ease-in-out;
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Subtle border for depth */
+}
+
+    /* Form heading (shared by both login and register forms) */
+    .form-container h1 {
+        font-size: 24px;
+        color: #000; /* Black text for better readability */
+        margin-bottom: 20px;
+        text-transform: uppercase;
+        font-weight: bold;
+    }
+
+    /* Input fields (shared by both login and register forms) */
+    .form-container input {
+        width: 100%;
+        padding: 12px;
+        margin: 10px 0;
+        border: none;
+        border-radius: 6px;
+        font-size: 16px;
+        background: rgba(255, 255, 255, 0.9); /* Slightly opaque white background */
+        color: #000; /* Black text */
+        outline: none;
+        transition: background 0.3s ease;
+    }
+
+        /* Input hover effect (shared by both login and register forms) */
+        .form-container input:hover {
+            background: rgba(255, 255, 255, 1); /* Fully opaque on hover */
+        }
+
+        /* Placeholder color (shared by both login and register forms) */
+        .form-container input::placeholder {
+            color: rgba(0, 0, 0, 0.6); /* Darker placeholder for contrast */
+        }
+
+    /* Submit button (shared by both login and register forms) */
+    .form-container .form-btn {
+        background: #c4e700; 
+        border: none;
+        color: white;
+        padding: 12px;
+        font-size: 18px;
+        border-radius: 6px;
+        cursor: pointer;
+        transition: 0.3s;
+        margin-top: 10px;
+    }
+
+        /* Button hover effect (shared by both login and register forms) */
+        .form-container .form-btn:hover {
+            background: #c4e700; /* Gradient hover effect */
+            transform: scale(1.05);
+        }
+
+/* Error message (shared by both login and register forms) */
+.error-msg {
+    color: #ff4d4d;
+    font-size: 14px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+/* Link styling (shared by both login and register forms) */
+.form-container p {
+    color: #000; /* Black text */
+    font-size: 14px;
+    margin-top: 15px;
+}
+
+    .form-container p a {
+        color: #c4e700; /* Use #c4e700 for links */
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+        .form-container p a:hover {
+            text-decoration: underline;
+        }
+
+/* Fade-in animation (shared by both login and register forms) */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Pop-out animation (shared by both login and register forms) */
+@keyframes popOut {
+    from {
+        transform: scale(0.9);
+    }
+
+    to {
+        transform: scale(1);
+    }
+}
