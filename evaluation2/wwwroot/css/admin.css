@@ -3,18 +3,22 @@ body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background: #f4f4f4;
+    background: #eef1f7;
     display: flex;
+    color: #333;
 }
 
 /* Sidebar */
 .sidebar {
     width: 250px;
-    background: #2c3e50;
-    color: white;
-    padding: 20px;
+    background: #1e293b;
+    color: #ecf0f1;
     height: 100vh;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
     position: fixed;
+    left: 0;
+    top: 0;
 }
 
     .sidebar .logo {
@@ -22,7 +26,7 @@ body {
         font-weight: bold;
         text-align: center;
         margin-bottom: 20px;
-        color: #c4e700; /* Using bright green for the logo */
+        color: #4caf50;
     }
 
     .sidebar nav ul {
@@ -41,7 +45,7 @@ body {
     font-size: 18px;
     display: flex;
     align-items: center;
-    padding: 10px 15px;
+    padding: 12px 18px;
     width: 100%;
     text-align: left;
     cursor: pointer;
@@ -53,8 +57,8 @@ body {
     }
 
     .sidebar-btn:hover {
-        background-color: #c4e700; /* Hover effect with the bright green */
-        padding-left: 20px;
+        background-color: #4caf50;
+        padding-left: 25px;
     }
 
     .sidebar-btn:focus {
@@ -63,9 +67,10 @@ body {
 
 /* Content */
 .content {
-    margin-left: 270px;
+    margin-left: 280px;
     padding: 20px;
     flex-grow: 1;
+    width: calc(100% - 270px);
 }
 
 /* Admin Header */
@@ -73,69 +78,68 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px;
+    padding: 20px;
     background: white;
-    border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     color: #333;
 }
 
-    .admin-header h1 {
-        color: #2c3e50; /* Default dark color for header */
+    .admin-header h2 {
+        color: #1e293b;
     }
 
     .admin-header button {
-        background-color: #c4e700; /* Bright green for buttons */
+        background-color: #4caf50;
         color: white;
-        padding: 10px 20px;
+        padding: 10px 16px;
         border: none;
-        border-radius: 5px;
+        border-radius: 6px;
         cursor: pointer;
         transition: background-color 0.3s ease;
     }
 
         .admin-header button:hover {
-            background-color: #27ae60; /* Darker green for hover effect */
+            background-color: #388e3c;
         }
 
 /* Dashboard Grid */
 .dashboard-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 15px;
     margin-top: 20px;
 }
 
 .dashboard-item {
     background: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 18px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
-    font-size: 1.2em;
+    font-size: 1.1em;
     transition: transform 0.3s ease-in-out;
-    color: #2c3e50;
+    color: #1e293b;
 }
 
     .dashboard-item:hover {
         transform: scale(1.05);
-        background: #c4e700; /* Use bright green on hover */
+        background: #4caf50;
         color: white;
     }
 
 /* Dark Mode */
 .dark-mode {
-    background: #181818;
+    background: #121212;
     color: white;
 }
 
     .dark-mode .admin-header,
-    .dark-mode .user-management,
     .dark-mode .dashboard-item {
-        background: #222;
+        background: #1e1e1e;
         color: white;
     }
 
         .dark-mode .dashboard-item:hover {
-            background: #27ae60; /* Dark green hover effect in dark mode */
+            background: #388e3c;
         }

@@ -19,19 +19,6 @@ namespace evaluation2.Controllers
             return View();
         }
 
-        [HttpPost]
-        public async Task<IActionResult> Login(string name, string password)
-        {
-            var v = _context.Volunteer.FirstOrDefault(u => (u.Email == name || u.Username == name) && u.Password == password);
-            if (v != null)
-            {
-                HttpContext.Session.SetInt32("UserId", v.Id);
-                HttpContext.Session.SetString("Username", v.Username);
-                return RedirectToAction("Index", "Home");
-            }
-            ViewBag.Error = "Incorrect email or password!";
-            return View();
-        }
 
         public IActionResult Signup()
         {
@@ -54,7 +41,7 @@ namespace evaluation2.Controllers
             }
             _context.Volunteer.Add(model);
             await _context.SaveChangesAsync();
-            return RedirectToAction("Login");
+            return RedirectToAction("Login", "Account");
         }
     }
 }

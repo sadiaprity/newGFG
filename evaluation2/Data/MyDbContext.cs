@@ -10,6 +10,8 @@ namespace evaluation2.Data
        public DbSet<Users> Users { get; set; }
        public DbSet<Volunteer> Volunteer { get; set; }
 
+        public DbSet<Notice> Notice{ get; set; }
+
 
     }
 }
