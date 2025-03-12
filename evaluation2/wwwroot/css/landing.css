@@ -310,6 +310,41 @@ nav {
         margin-top: 10px;
     }
 
+
+    /* Styling the button inside the middle card */
+    .card-content .volunteer-btn {
+        background: #7bd500; /* Vibrant green with a touch of yellow */
+        border: none;
+        color: white;
+        padding: 12px 20px;
+        font-size: 18px;
+        font-weight: bold;
+        border-radius: 8px; /* Rounded corners for a smooth look */
+        cursor: pointer;
+        transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+        margin-top: 20px;
+        display: inline-block;
+        text-align: center;
+        box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.2); /* Soft shadow for depth */
+    }
+
+        /* Hover effect with a darker green shade */
+        .card-content .volunteer-btn:hover {
+            background: #4b9f00; /* Darker green on hover */
+            transform: scale(1.05); /* Slight zoom effect */
+            box-shadow: 4px 6px 12px rgba(0, 0, 0, 0.3); /* Stronger shadow on hover */
+        }
+
+        /* Focus effect for accessibility */
+        .card-content .volunteer-btn:focus {
+            outline: 3px solid #3a8c00; /* Focus outline color matching the button */
+            outline-offset: 2px;
+        }
+
+
+
+  
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .cards {

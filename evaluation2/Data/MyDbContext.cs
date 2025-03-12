@@ -8,6 +8,7 @@ namespace evaluation2.Data
     {
         public MyDbContext(DbContextOptions<MyDbContext> options) : base(options) { }
        public DbSet<Users> Users { get; set; }
+       public DbSet<Volunteer> Volunteer { get; set; }
 
 
     }
